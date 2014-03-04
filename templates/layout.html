@@ -11,14 +11,12 @@
     <title>Andreas</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 
-<script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_o8A-cKjgjjtCw1XdfnAg9I56aoEtq5Q&sensor=false">
-
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_o8A-cKjgjjtCw1XdfnAg9I56aoEtq5Q&sensor=false">
     </script>
     <script type="text/javascript">
       function initialize() {
         var mapOptions = {
-          center: new google.maps.LatLng(-34.397, 150.644),
+          //center: new google.maps.LatLng(-34.397, 150.644),
           zoom: 8
         };
         var map = new google.maps.Map(document.getElementById("map-canvas"),
@@ -29,30 +27,19 @@
 </head>
 <body>
 
-<div id="title">
-    <h1>Welcome to Andreas' website in Flask</h1>
+  <div id="title">
+      <h1>Welcome to Andreas' website in Flask</h1>
 
-</div>
+  </div>
 
-
-
-
-
-<div id="navigation">
-    <ul>
-        <li><a href="{{ url_for('home') }}">Home</a></li>
-        <li><a href="{{ url_for('about') }}">About</a></li>
-        <li><a href="{{ url_for('map') }}">Map</a></li>
-    </ul>
-</div>
-
-
-
-
-    {% block content %}
-    {% endblock %}
-
-
-</body>
-
+  <div id="navigation">
+      <ul>
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('map') }}">Map</a></li>
+      </ul>
+  </div>
+      {% block content %}
+      {% endblock %}
+  </body>
 </html>
